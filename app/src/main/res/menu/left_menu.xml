@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="left_navigation">
+    <item android:id="@+id/collect" android:title="收藏" android:icon="@drawable/ic_launcher_foreground"/>
+</menu>

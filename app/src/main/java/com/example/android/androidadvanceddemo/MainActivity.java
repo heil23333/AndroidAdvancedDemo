@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.android.androidadvanceddemo.aidl.AIDLActivity;
 import com.example.android.androidadvanceddemo.databinding.ActivityMainBinding;
 import com.example.android.androidadvanceddemo.drawerlayout.DrawerLayoutActivity;
 import com.example.android.androidadvanceddemo.fragment.FragmentActivity;
@@ -22,6 +23,7 @@ public class MainActivity extends BaseActivity {
         binding.button.setOnClickListener(view -> startActivity(new Intent(this, RecyclerViewActivity.class)));
         binding.button2.setOnClickListener(view-> startActivity(new Intent(this, DrawerLayoutActivity.class)));
         binding.fragment.setOnClickListener(view-> startActivity(new Intent(this, FragmentActivity.class)));
+        binding.btnAidl.setOnClickListener(view-> startActivity(new Intent(this, AIDLActivity.class)));
         setTitle("MainActivity");
     }
 }

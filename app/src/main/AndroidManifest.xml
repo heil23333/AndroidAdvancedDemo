@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".aidl.AIDLActivity"></activity>
+        <activity android:name=".aidl.AIDLActivity" />
         <activity android:name=".fragment.FragmentActivity" />
         <activity android:name=".drawerlayout.DrawerLayoutActivity" />
         <activity android:name=".recyclerview.RecyclerViewActivity" />

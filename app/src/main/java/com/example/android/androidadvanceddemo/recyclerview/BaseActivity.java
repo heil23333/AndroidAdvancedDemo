@@ -1,6 +1,7 @@
 package com.example.android.androidadvanceddemo.recyclerview;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -18,6 +19,11 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getDarkModeStatus(getBaseContext())) {
+            setTheme(R.style.main_theme_dark);
+        } else {
+            setTheme(R.style.main_theme_light);
+        }
     }
     public void setTitle(String title) {
         toolbar = findViewById(R.id.tool_bar);
@@ -42,5 +48,10 @@ public class BaseActivity extends AppCompatActivity {
             return true;
         }
         return onTouchEvent(ev);
+    }
+
+    public static boolean getDarkModeStatus(Context context) {
+        int mode = context.getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;
+        return mode == Configuration.UI_MODE_NIGHT_YES;
     }
 }

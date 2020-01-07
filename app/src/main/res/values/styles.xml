@@ -8,4 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="main_theme_light" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="main_text_color">@color/main_text_color_light</item>
+        <item name="main_bg_color">@color/main_bg_color_light</item>
+    </style>
+
+    <style name="main_theme_dark" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="main_text_color">@color/main_bg_color_light</item>
+        <item name="main_bg_color">@color/main_text_color_light</item>
+    </style>
 </resources>

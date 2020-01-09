@@ -9,6 +9,7 @@ import com.example.android.androidadvanceddemo.aidl.AIDLActivity;
 import com.example.android.androidadvanceddemo.databinding.ActivityMainBinding;
 import com.example.android.androidadvanceddemo.drawerlayout.DrawerLayoutActivity;
 import com.example.android.androidadvanceddemo.fragment.FragmentActivity;
+import com.example.android.androidadvanceddemo.handler.HandlerActivity;
 import com.example.android.androidadvanceddemo.recyclerview.BaseActivity;
 import com.example.android.androidadvanceddemo.recyclerview.RecyclerViewActivity;
 
@@ -24,6 +25,7 @@ public class MainActivity extends BaseActivity {
         binding.button2.setOnClickListener(view-> startActivity(new Intent(this, DrawerLayoutActivity.class)));
         binding.fragment.setOnClickListener(view-> startActivity(new Intent(this, FragmentActivity.class)));
         binding.btnAidl.setOnClickListener(view-> startActivity(new Intent(this, AIDLActivity.class)));
+        binding.button3.setOnClickListener(view -> startActivity(new Intent(this, HandlerActivity.class)));
         setTitle("MainActivity");
     }
 }

@@ -10,69 +10,64 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:background="?attr/main_bg_color">
+        tools:context=".handler.HandlerActivity">
 
-        <include
-            android:id="@+id/tool_bar"
-            layout="@layout/tool_bar"
+        <Button
+            android:id="@+id/start_thread1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启子线程1(发送消息至主线程)"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/button"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RecyclerView相关"
-            android:textAllCaps="false"
+            android:layout_marginBottom="32dp"
+            android:text="TextView"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tool_bar"
-            android:textColor="?attr/main_text_color"/>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="DrawerLayout相关"
-            android:textAllCaps="false"
+            android:text="主线程发送消息到子线程"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button"
-            android:textColor="?attr/main_text_color"/>
+            app:layout_constraintTop_toBottomOf="@+id/start_thread1" />
 
         <Button
-            android:id="@+id/fragment"
+            android:id="@+id/button5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fragment和ViewPager"
-            android:textAllCaps="false"
+            android:text="判断子线程有没有存活"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button2"
-            android:textColor="?attr/main_text_color"/>
+            app:layout_constraintTop_toBottomOf="@+id/button4" />
 
         <Button
-            android:id="@+id/btn_aidl"
+            android:id="@+id/button7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AIDL"
+            android:text="开启子线程2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragment"
-            android:textColor="?attr/main_text_color"/>
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/button6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="handler机制"
-            android:textAllCaps="false"
+            android:text="开启子线程并发送消息至主线程2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_aidl"
-            android:textColor="?attr/main_text_color"/>
+            app:layout_constraintTop_toBottomOf="@+id/button7" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
